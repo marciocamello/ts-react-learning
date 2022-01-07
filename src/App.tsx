@@ -12,6 +12,7 @@ import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { MustableRef } from './components/ref/MustableRef';
 import { Status } from './components/Status';
 
 function App() {
@@ -38,9 +39,10 @@ function App() {
 
     return (
         <div className="App">
-            <UserContextProvider>
+            <MustableRef />
+            {/* <UserContextProvider>
                 <User />
-            </UserContextProvider>
+            </UserContextProvider> */}
             {/* <ThemeContextProvider>
                 <Box />
             </ThemeContextProvider> */}
