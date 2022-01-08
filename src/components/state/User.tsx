@@ -1,9 +1,5 @@
 import { useState } from "react";
-
-type AuthUser = {
-    name: string;
-    email: string;
-}
+import { AuthUser } from "../context/UserContext";
 
 export const User = () => {
     const [user, setUser] = useState<AuthUser>({} as AuthUser);
@@ -11,6 +7,7 @@ export const User = () => {
 
     const handleLogin = () => {
         setUser({
+            id: 1,
             name: 'Marcio',
             email: 'email@test.com'
         })
@@ -24,6 +21,7 @@ export const User = () => {
         <div>
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleLogout}>Logout</button>
+            <div>User id is {user?.id}</div>
             <div>User name is {user?.name}</div>
             <div>User email is {user?.email}</div>
         </div>
